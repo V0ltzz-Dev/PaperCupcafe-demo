@@ -1,0 +1,206 @@
+/* ===========================
+   Base & Body
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(-30deg, #1a0a2e, #2d1554);
+    text-shadow: 0 0 8px #7b3fa0;
+    font-family: sans-serif;
+    color: #f0e6ff;
+}
+
+/* ===========================
+   Header & Nav
+=========================== */
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 24px 10px;
+}
+
+.btnholder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #a855f7;
+    border-radius: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #3b1a6b;
+    color: #e9d5ff;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #a855f7;
+    color: #1a0a2e;
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   Main Layout
+=========================== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px 40px;
+    gap: 40px;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    text-align: center;
+    color: #e9d5ff;
+}
+
+/* ===========================
+   Contact Grid
+=========================== */
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.detail-card {
+    flex: 1;
+    min-width: 240px;
+    background-color: #1e0d3e;
+    border: 2px solid #6b21a8;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.35);
+}
+
+.detail-card h3 {
+    font-size: 1.6rem;
+    color: #c084fc;
+    margin: 0 0 16px;
+}
+
+.detail-card p {
+    font-size: 1.05rem;
+    color: #d8b4fe;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.detail-card a {
+    color: #d8b4fe;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.detail-card a:hover {
+    color: #a855f7;
+    text-decoration: underline;
+}
+
+.developer {
+    border-color: #4c1d95;
+    background-color: #1e0d3e;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #a78bca;
+    border-top: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+/* ===========================
+   Responsive (Mobile)
+=========================== */
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-card {
+        width: 90%;
+    }
+}
+
+/* =============
+    Animation 
+============== */
+
+@keyframes SlideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.SlideInLeft {
+    animation: SlideInLeft 1s ease;
+}
+
+.SlideInRight {
+    animation: SlideInRight 1s ease;
+}

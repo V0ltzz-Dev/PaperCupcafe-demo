@@ -1,0 +1,255 @@
+/* ===========================
+   Base & Body
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(-30deg, #1a0a2e, #2d1554);
+    text-shadow: 0 0 8px #7b3fa0;
+    font-family: sans-serif;
+    color: #f0e6ff;
+}
+
+/* ===========================
+   Header & Nav
+=========================== */
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 24px 10px;
+}
+
+.btnholder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #a855f7;
+    border-radius: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #3b1a6b;
+    color: #e9d5ff;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #a855f7;
+    color: #1a0a2e;
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 480px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #e9d5ff;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #c084fc;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #d8b4fe;
+    line-height: 1.6;
+}
+
+#logo-img {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.25), 0 0 100px rgba(168, 85, 247, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 8px;
+}
+
+/* ===========================
+   About
+=========================== */
+
+.about {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #c084fc;
+    margin-bottom: 12px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #d8b4fe;
+    line-height: 1.7;
+}
+
+/* ===========================
+   Popular Items
+=========================== */
+
+.popular-items {
+    max-width: 500px;
+    margin: 0 auto 80px;
+    padding: 30px 40px;
+    background-color: #2d1554;
+    border: 2px solid #6b21a8;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+}
+
+.popular-items h2 {
+    font-size: 2rem;
+    color: #c084fc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popular-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.popular-items ul li {
+    font-size: 1.1rem;
+    color: #f0e6ff;
+    padding: 10px 16px;
+    background-color: #3b1a6b;
+    border-radius: 8px;
+    border-left: 4px solid #a855f7;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #a78bca;
+    border-top: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+#link-menu {
+    color: #e9d5ff;
+}
+
+/* ===========================
+   Responsive (Mobile)
+=========================== */
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+
+    #logo-img {
+        height: 60vw;
+        width: 60vw;
+    }
+
+    .popular-items {
+        padding: 20px;
+        margin: 0 16px 60px;
+    }
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes SlideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.SlideInLeft {
+    animation: SlideInLeft 1s ease;
+}
+
+.SlideInRight {
+    animation: SlideInRight 1s ease;
+}
